@@ -56,7 +56,7 @@ self.bgImg = bgImg;
 }
 ```
 
-6.实现scrollView代理方法（实现导航栏上隐下现效果）
+5.实现scrollView代理方法（实现导航栏上隐下现效果）
 ```
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
