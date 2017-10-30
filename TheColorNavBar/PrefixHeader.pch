@@ -1,0 +1,38 @@
+//
+//  PrefixHeader.pch
+//  TheColorNavBar
+//
+//  Created by zhangming on 2017/10/27.
+//  Copyright © 2017年 youjiesi. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// 判断是否是iPhone X
+#define iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+// 状态栏高度
+#define STATUS_BAR_HEIGHT (iPhoneX ? 44.f : 20.f)
+// 导航栏高度
+#define NAVBAR_HEIGHT iPhoneX ? 88.0f : 64.0f
+// tabBar高度
+#define TABBAR_HEIGHT (iPhoneX ? (49.f+34.f) : 49.f)
+// home indicator
+#define HOME_Bottom iPhoneX ? 34.0f : 0.0f
+
+#define ScreenWidth [[UIScreen mainScreen] bounds].size.width
+#define ScreenHeight [[UIScreen mainScreen] bounds].size.height
+
+#define ADHeight ScreenWidth / 16 * 9
+#define BASECOLOR [UIColor colorWithHexString:@"#4A4A4A"]
+
+#import "UIView+Extension.h"
+#import "UIButton+Extension.h"
+#import "UIBarButtonItem+Extension.h"
+#import "UIColor+Extension.h"
+#import "UIImageView+WebCache.h"
+#import "UIImage+Extension.h"
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
