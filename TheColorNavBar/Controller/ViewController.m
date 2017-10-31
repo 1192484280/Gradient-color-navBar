@@ -71,14 +71,10 @@
 
 - (void)setNavBar{
     
-    
     self.navBar = self.navigationController.navigationBar;
-    
     
     //取消导航栏最下面的那一条线
     [self.navigationController.navigationBar setShadowImage:[UIImage new]];
-    
-    
     
     UIBarButtonItem *left = [UIBarButtonItem itemWithImageName:@"my_message" highImageName:@"my" target:self action:@selector(msgClick)];
     
@@ -107,6 +103,8 @@
 - (void)msgClick{
     
     NSLog(@"消息");
+    
+    
 }
 - (void)scanClick{
     
